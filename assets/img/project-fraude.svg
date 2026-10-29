@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-label="Interface de l'application web anti-fraude">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0713"/>
+      <stop offset=".5" stop-color="#130b1a"/>
+      <stop offset="1" stop-color="#1a0e1f"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#f43f5e"/>
+      <stop offset="1" stop-color="#fb7185"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f43f5e"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#fda4af" opacity=".1"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="50"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000" flood-opacity=".5"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#dots)"/>
+  <circle cx="1050" cy="140" r="240" fill="#f43f5e" opacity=".16" filter="url(#soft)"/>
+  <circle cx="180" cy="620" r="230" fill="#8b5cf6" opacity=".18" filter="url(#soft)"/>
+
+  <!-- browser -->
+  <g transform="translate(112 96)" filter="url(#shadow)">
+    <rect width="760" height="500" rx="22" fill="#140d1c" stroke="#ffffff" stroke-opacity=".12"/>
+    <rect width="760" height="52" rx="22" fill="#ffffff" fill-opacity=".04"/>
+    <g fill="#3d2f4a">
+      <circle cx="26" cy="26" r="6"/>
+      <circle cx="46" cy="26" r="6"/>
+      <circle cx="66" cy="26" r="6"/>
+    </g>
+    <rect x="92" y="14" width="300" height="24" rx="12" fill="#0d0813" stroke="#ffffff" stroke-opacity=".08"/>
+    <text x="106" y="30" fill="#8d7a9b" font-family="Consolas, monospace" font-size="11">app.oxydev.tn / anti-fraude</text>
+    <g transform="translate(724 26)">
+      <circle cx="0" cy="0" r="8" fill="#f43f5e" opacity=".2"/>
+      <circle cx="0" cy="0" r="3" fill="#f43f5e"/>
+    </g>
+
+    <!-- sidebar -->
+    <rect x="0" y="52" width="170" height="448" fill="#0f0917"/>
+    <text x="24" y="88" fill="#ffe4ec" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Bouclier</text>
+    <text x="24" y="105" fill="#7e6589" font-family="Segoe UI, Arial, sans-serif" font-size="9" letter-spacing="1">ANTI-FRAUDE</text>
+    <g font-family="Segoe UI, Arial, sans-serif" font-size="11">
+      <rect x="14" y="126" width="142" height="32" rx="8" fill="#f43f5e" opacity=".12"/>
+      <circle cx="30" cy="142" r="4" fill="#f43f5e"/>
+      <text x="44" y="146" fill="#ffd7e1" font-weight="600">Tableau de bord</text>
+      <circle cx="30" cy="180" r="4" fill="#6b5577"/>
+      <text x="44" y="184" fill="#a48eae">Transactions</text>
+      <circle cx="30" cy="214" r="4" fill="#6b5577"/>
+      <text x="44" y="218" fill="#a48eae">Alertes</text>
+      <circle cx="30" cy="248" r="4" fill="#6b5577"/>
+      <text x="44" y="252" fill="#a48eae">Rapports</text>
+      <circle cx="30" cy="282" r="4" fill="#6b5577"/>
+      <text x="44" y="286" fill="#a48eae">Utilisateurs</text>
+    </g>
+    <rect x="14" y="452" width="142" height="1" fill="#ffffff" opacity=".08"/>
+    <g transform="translate(24 470)">
+      <circle cx="10" cy="10" r="10" fill="#8b5cf6" opacity=".3"/>
+      <text x="10" y="14" text-anchor="middle" fill="#e9d5ff" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="700">HE</text>
+      <text x="28" y="8" fill="#e9d5ff" font-family="Segoe UI, Arial, sans-serif" font-size="10">Analyste</text>
+      <text x="28" y="20" fill="#7e6589" font-family="Segoe UI, Arial, sans-serif" font-size="8">Session sécurisée</text>
+    </g>
+
+    <!-- main -->
+    <text x="196" y="92" fill="#ffe4ec" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Transactions suspectes</text>
+    <text x="196" y="110" fill="#8d7a9b" font-family="Segoe UI, Arial, sans-serif" font-size="10">Analyse de risque en temps réel · 1 284 transactions aujourd'hui</text>
+
+    <!-- KPIs -->
+    <g transform="translate(196 128)" font-family="Segoe UI, Arial, sans-serif">
+      <g>
+        <rect width="172" height="74" rx="12" fill="#1b1024" stroke="#ffffff" stroke-opacity=".07"/>
+        <text x="14" y="22" fill="#8d7a9b" font-size="9" letter-spacing=".6">RISQUE ÉLEVÉ</text>
+        <text x="14" y="52" fill="#fda4af" font-size="24" font-weight="700">23</text>
+        <text x="52" y="52" fill="#8d7a9b" font-size="10">cas</text>
+      </g>
+      <g transform="translate(188 0)">
+        <rect width="172" height="74" rx="12" fill="#1b1024" stroke="#ffffff" stroke-opacity=".07"/>
+        <text x="14" y="22" fill="#8d7a9b" font-size="9" letter-spacing=".6">BLOQUÉES</text>
+        <text x="14" y="52" fill="#34d399" font-size="24" font-weight="700">17</text>
+        <text x="52" y="52" fill="#8d7a9b" font-size="10">transactions</text>
+      </g>
+      <g transform="translate(376 0)">
+        <rect width="172" height="74" rx="12" fill="#1b1024" stroke="#ffffff" stroke-opacity=".07"/>
+        <text x="14" y="22" fill="#8d7a9b" font-size="9" letter-spacing=".6">TAUX DE FRAUDE</text>
+        <text x="14" y="52" fill="#e9d5ff" font-size="24" font-weight="700">1.8</text>
+        <text x="58" y="52" fill="#8d7a9b" font-size="10">%</text>
+      </g>
+    </g>
+
+    <!-- chart -->
+    <g transform="translate(196 222)">
+      <rect width="360" height="170" rx="14" fill="#1a1022" stroke="#ffffff" stroke-opacity=".06"/>
+      <text x="16" y="26" fill="#e6d3ea" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600">Anomalies détectées</text>
+      <g stroke="#ffffff" stroke-opacity=".05">
+        <path d="M16 66 H344"/>
+        <path d="M16 104 H344"/>
+        <path d="M16 142 H344"/>
+      </g>
+      <g fill="url(#bar)">
+        <rect x="26" y="118" width="24" height="42" rx="4"/>
+        <rect x="66" y="98" width="24" height="62" rx="4"/>
+        <rect x="106" y="128" width="24" height="32" rx="4"/>
+        <rect x="146" y="78" width="24" height="82" rx="4"/>
+        <rect x="186" y="108" width="24" height="52" rx="4"/>
+        <rect x="226" y="58" width="24" height="102" rx="4"/>
+        <rect x="266" y="88" width="24" height="72" rx="4"/>
+        <rect x="306" y="44" width="24" height="116" rx="4" opacity=".7"/>
+      </g>
+      <path d="M38 110 L78 90 L118 120 L158 70 L198 100 L238 48 L278 80 L318 34" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="4 4"/>
+    </g>
+
+    <!-- alerts list -->
+    <g transform="translate(572 222)" font-family="Segoe UI, Arial, sans-serif">
+      <rect width="168" height="170" rx="14" fill="#1a1022" stroke="#ffffff" stroke-opacity=".06"/>
+      <text x="14" y="26" fill="#e6d3ea" font-size="11" font-weight="600">Dernières alertes</text>
+      <g>
+        <circle cx="20" cy="48" r="4" fill="#f43f5e"/>
+        <text x="32" y="52" fill="#d9c3de" font-size="9">Paiement hors zone</text>
+        <text x="32" y="64" fill="#7e6589" font-size="8">il y a 2 min</text>
+      </g>
+      <g>
+        <circle cx="20" cy="86" r="4" fill="#f59e0b"/>
+        <text x="32" y="90" fill="#d9c3de" font-size="9">Montant inhabituel</text>
+        <text x="32" y="102" fill="#7e6589" font-size="8">il y a 8 min</text>
+      </g>
+      <g>
+        <circle cx="20" cy="124" r="4" fill="#f43f5e"/>
+        <text x="32" y="128" fill="#d9c3de" font-size="9">Carte utilisée 2×</text>
+        <text x="32" y="140" fill="#7e6589" font-size="8">il y a 14 min</text>
+      </g>
+    </g>
+
+    <!-- table -->
+    <g transform="translate(196 410)" font-family="Segoe UI, Arial, sans-serif">
+      <rect width="544" height="72" rx="12" fill="#1a1022" stroke="#ffffff" stroke-opacity=".06"/>
+      <text x="16" y="22" fill="#8d7a9b" font-size="8" letter-spacing=".6">ID</text>
+      <text x="82" y="22" fill="#8d7a9b" font-size="8" letter-spacing=".6">CLIENT</text>
+      <text x="230" y="22" fill="#8d7a9b" font-size="8" letter-spacing=".6">MONTANT</text>
+      <text x="340" y="22" fill="#8d7a9b" font-size="8" letter-spacing=".6">SCORE</text>
+      <text x="460" y="22" fill="#8d7a9b" font-size="8" letter-spacing=".6">STATUT</text>
+      <g font-size="10" fill="#d9c3de">
+        <text x="16" y="46">#TX-8842</text>
+        <text x="82" y="46">Compte A.</text>
+        <text x="230" y="46">4 200 DT</text>
+        <text x="340" y="46" fill="#fda4af">92/100</text>
+      </g>
+      <rect x="460" y="34" width="64" height="18" rx="9" fill="#f43f5e" opacity=".18"/>
+      <text x="492" y="47" text-anchor="middle" fill="#fda4af" font-size="8" font-weight="600">BLOQUÉ</text>
+    </g>
+  </g>
+
+  <!-- floating shield -->
+  <g transform="translate(836 160)">
+    <circle cx="110" cy="110" r="110" fill="#f43f5e" opacity=".07"/>
+    <circle cx="110" cy="110" r="84" fill="#140d1c" stroke="#f43f5e" stroke-opacity=".35"/>
+    <path d="M110 54 L154 72 V104 C154 132 135 148 110 158 C85 148 66 132 66 104 V72 Z" fill="url(#shield)" fill-opacity=".18" stroke="url(#shield)" stroke-width="2.5"/>
+    <path d="M92 104 L105 117 L130 89" fill="none" stroke="#fb7185" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+    <text x="110" y="196" text-anchor="middle" fill="#fda4af" font-family="Consolas, monospace" font-size="11" letter-spacing="1.5">SCORE DE RISQUE</text>
+    <text x="110" y="228" text-anchor="middle" fill="#ffe4ec" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">98.4%</text>
+    <text x="110" y="248" text-anchor="middle" fill="#8d7a9b" font-family="Segoe UI, Arial, sans-serif" font-size="10">précision de détection</text>
+  </g>
+
+  <!-- chips -->
+  <g transform="translate(836 486)" font-family="Consolas, monospace" font-size="11">
+    <g>
+      <rect width="118" height="34" rx="17" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".1"/>
+      <text x="59" y="22" text-anchor="middle" fill="#d9c3de">SYMFONY</text>
+    </g>
+    <g transform="translate(130 0)">
+      <rect width="118" height="34" rx="17" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".1"/>
+      <text x="59" y="22" text-anchor="middle" fill="#d9c3de">MYSQL</text>
+    </g>
+    <g transform="translate(0 46)">
+      <rect width="248" height="34" rx="17" fill="#ffffff" fill-opacity=".05" stroke="#ffffff" stroke-opacity=".1"/>
+      <text x="124" y="22" text-anchor="middle" fill="#d9c3de">BOOTSTRAP · PHP</text>
+    </g>
+  </g>
+
+  <text x="112" y="654" fill="#ffe4ec" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="600">Détecter la fraude avant qu'elle ne passe</text>
+  <text x="112" y="682" fill="#8d7a9b" font-family="Segoe UI, Arial, sans-serif" font-size="13">Stage de fin d'études · OXYDEV · 2024</text>
+</svg>

@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-label="Robot de sécurité domestique autonome en patrouille">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0714"/>
+      <stop offset=".55" stop-color="#0d0b1c"/>
+      <stop offset="1" stop-color="#131024"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1730"/>
+      <stop offset="1" stop-color="#0c0a18"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b3a5c"/>
+      <stop offset=".5" stop-color="#23213c"/>
+      <stop offset="1" stop-color="#161428"/>
+    </linearGradient>
+    <radialGradient id="scan" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="tiles" width="70" height="70" patternUnits="userSpaceOnUse" patternTransform="skewX(-18)">
+      <path d="M70 0 H0 V70" fill="none" stroke="#8b5cf6" stroke-opacity=".1"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="50"/>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#000" flood-opacity=".55"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <ellipse cx="600" cy="470" rx="520" ry="260" fill="#1e1b4b" opacity=".55"/>
+  <rect x="60" y="250" width="1080" height="390" fill="url(#floor)" opacity=".85" rx="18"/>
+  <rect x="60" y="250" width="1080" height="390" fill="url(#tiles)" rx="18"/>
+  <circle cx="260" cy="120" r="200" fill="#8b5cf6" opacity=".16" filter="url(#soft)"/>
+  <circle cx="1000" cy="600" r="220" fill="#22d3ee" opacity=".08" filter="url(#soft)"/>
+
+  <!-- walls / plan -->
+  <g stroke="#8b5cf6" stroke-opacity=".22" stroke-width="3" fill="none">
+    <path d="M120 300 H420 V470 H120"/>
+    <path d="M760 290 H1080 V500 H930 V620"/>
+  </g>
+  <g fill="#151228" stroke="#a78bfa" stroke-opacity=".18">
+    <rect x="170" y="340" width="110" height="60" rx="8"/>
+    <rect x="170" y="420" width="52" height="26" rx="6"/>
+  </g>
+
+  <!-- patrol path -->
+  <path d="M220 600 C300 520 430 560 500 500 C570 440 690 470 760 420 C830 370 900 420 980 380"
+        fill="none" stroke="#a78bfa" stroke-width="3" stroke-dasharray="10 12" stroke-opacity=".55"/>
+  <g fill="#a78bfa" opacity=".7">
+    <circle cx="220" cy="600" r="5"/>
+    <circle cx="500" cy="500" r="5"/>
+    <circle cx="760" cy="420" r="5"/>
+    <circle cx="980" cy="380" r="5"/>
+  </g>
+
+  <!-- scan zone -->
+  <g transform="translate(470 150)">
+    <path d="M180 210 L60 470 L300 470 Z" fill="url(#scan)" opacity=".75"/>
+    <g stroke="#a78bfa" stroke-opacity=".35" stroke-width="2" fill="none">
+      <path d="M180 210 L60 470"/>
+      <path d="M180 210 L300 470"/>
+      <path d="M118 350 Q180 380 242 350"/>
+    </g>
+  </g>
+
+  <!-- robot -->
+  <g transform="translate(388 300)" filter="url(#shadow)">
+    <!-- wheels -->
+    <g fill="#111020" stroke="#ffffff" stroke-opacity=".12">
+      <rect x="12" y="96" width="46" height="86" rx="18"/>
+      <rect x="198" y="96" width="46" height="86" rx="18"/>
+    </g>
+    <g stroke="#8b5cf6" stroke-opacity=".5">
+      <path d="M24 112 H46"/>
+      <path d="M24 130 H46"/>
+      <path d="M210 112 H232"/>
+      <path d="M210 130 H232"/>
+    </g>
+    <!-- chassis -->
+    <circle cx="128" cy="140" r="108" fill="url(#metal)" stroke="#ffffff" stroke-opacity=".14"/>
+    <circle cx="128" cy="140" r="88" fill="none" stroke="#a78bfa" stroke-opacity=".25"/>
+    <circle cx="128" cy="140" r="62" fill="#121022" stroke="#a78bfa" stroke-opacity=".3"/>
+    <!-- sensor head -->
+    <g transform="translate(68 118)">
+      <rect width="120" height="46" rx="16" fill="#1b1830" stroke="#a78bfa" stroke-opacity=".4"/>
+      <circle cx="30" cy="23" r="10" fill="#282244" stroke="#a78bfa" stroke-width="2"/>
+      <circle cx="30" cy="23" r="4" fill="#a78bfa" filter="url(#glow)"/>
+      <circle cx="60" cy="23" r="10" fill="#282244" stroke="#a78bfa" stroke-width="2"/>
+      <circle cx="60" cy="23" r="4" fill="#a78bfa" filter="url(#glow)"/>
+      <rect x="84" y="12" width="24" height="7" rx="3.5" fill="#34d399"/>
+      <rect x="84" y="26" width="24" height="4" rx="2" fill="#ffffff" opacity=".18"/>
+    </g>
+    <!-- camera dome -->
+    <g transform="translate(176 42)">
+      <circle cx="0" cy="0" r="26" fill="#171428" stroke="#22d3ee" stroke-opacity=".5" stroke-width="2"/>
+      <circle cx="0" cy="0" r="12" fill="#0b1a22"/>
+      <circle cx="0" cy="0" r="7" fill="#22d3ee" filter="url(#glow)"/>
+    </g>
+    <!-- antenna -->
+    <g stroke="#a78bfa" stroke-width="2">
+      <path d="M52 118 V86"/>
+    </g>
+    <circle cx="52" cy="82" r="4" fill="#a78bfa" filter="url(#glow)"/>
+
+    <!-- OLED panel -->
+    <g transform="translate(86 154)">
+      <rect width="84" height="48" rx="6" fill="#031018" stroke="#22d3ee" stroke-opacity=".5"/>
+      <text x="8" y="17" fill="#22d3ee" font-family="Consolas, monospace" font-size="9">PATROL 01</text>
+      <text x="8" y="30" fill="#7dd3fc" font-family="Consolas, monospace" font-size="9">DIST 42cm</text>
+      <text x="8" y="42" fill="#34d399" font-family="Consolas, monospace" font-size="9">MQTT: OK</text>
+    </g>
+    <!-- status leds -->
+    <g transform="translate(178 178)">
+      <circle cx="0" cy="0" r="4" fill="#34d399"/>
+      <circle cx="16" cy="0" r="4" fill="#22d3ee"/>
+      <circle cx="32" cy="0" r="4" fill="#f59e0b"/>
+    </g>
+    <!-- body label -->
+    <text x="128" y="146" text-anchor="middle" fill="#6f6796" font-family="Consolas, monospace" font-size="9" letter-spacing="2">SECURI-BOT</text>
+  </g>
+
+  <!-- node-red flow panel -->
+  <g transform="translate(790 88)" filter="url(#shadow)">
+    <rect width="320" height="170" rx="18" fill="#0d0b1a" stroke="#ffffff" stroke-opacity=".1"/>
+    <text x="20" y="32" fill="#e4defc" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Flux Node-RED</text>
+    <text x="300" y="32" text-anchor="end" fill="#34d399" font-family="Consolas, monospace" font-size="10">ACTIF</text>
+    <g transform="translate(20 52)">
+      <g>
+        <rect width="74" height="32" rx="8" fill="#2a1e4a" stroke="#a78bfa" stroke-opacity=".4"/>
+        <text x="37" y="20" text-anchor="middle" fill="#c4b5fd" font-family="Consolas, monospace" font-size="10">MQTT IN</text>
+      </g>
+      <path d="M74 16 H104" stroke="#a78bfa" stroke-width="2"/>
+      <g transform="translate(104 0)">
+        <rect width="86" height="32" rx="8" fill="#102b2a" stroke="#34d399" stroke-opacity=".4"/>
+        <text x="43" y="20" text-anchor="middle" fill="#6ee7b7" font-family="Consolas, monospace" font-size="10">DÉTECTION</text>
+      </g>
+      <path d="M190 16 H220" stroke="#a78bfa" stroke-width="2"/>
+      <g transform="translate(220 0)">
+        <rect width="60" height="32" rx="8" fill="#2b1a20" stroke="#f43f5e" stroke-opacity=".4"/>
+        <text x="30" y="20" text-anchor="middle" fill="#fda4af" font-family="Consolas, monospace" font-size="10">ALERTE</text>
+      </g>
+      <g transform="translate(0 58)">
+        <rect width="100" height="32" rx="8" fill="#13233d" stroke="#22d3ee" stroke-opacity=".4"/>
+        <text x="50" y="20" text-anchor="middle" fill="#7dd3fc" font-family="Consolas, monospace" font-size="10">DASHBOARD</text>
+      </g>
+      <g transform="translate(120 58)">
+        <rect width="96" height="32" rx="8" fill="#1b2333" stroke="#ffffff" stroke-opacity=".12"/>
+        <text x="48" y="20" text-anchor="middle" fill="#a8b6cb" font-family="Consolas, monospace" font-size="10">TELEGRAM</text>
+      </g>
+      <path d="M50 32 V50 H110" stroke="#22d3ee" stroke-width="2" fill="none" stroke-opacity=".6"/>
+    </g>
+  </g>
+
+  <!-- specs chip -->
+  <g transform="translate(92 560)">
+    <rect width="330" height="54" rx="27" fill="#0d0b1a" stroke="#a78bfa" stroke-opacity=".25"/>
+    <circle cx="28" cy="27" r="6" fill="#a78bfa"/>
+    <text x="46" y="24" fill="#e4defc" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">STM32 · L298N · HC-SR04</text>
+    <text x="46" y="40" fill="#8078a8" font-family="Consolas, monospace" font-size="9">PATROUILLE AUTONOME · ÉVITEMENT D'OBSTACLES</text>
+  </g>
+
+  <text x="92" y="676" fill="#e4defc" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="600">Un robot autonome qui veille sur la maison</text>
+  <text x="1108" y="676" text-anchor="end" fill="#8078a8" font-family="Consolas, monospace" font-size="13">STM32 · MQTT · NODE-RED</text>
+</svg>

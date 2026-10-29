@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hedia Elghoula — Ingénieure IoT &amp; Systèmes embarqués</title>
+  <meta name="description" content="Portfolio de Hedia Elghoula, étudiante ingénieure en génie informatique spécialisée en IoT. Systèmes embarqués, intelligence artificielle, réseaux, développement web et mobile.">
+  <meta name="author" content="Hedia Elghoula">
+  <meta name="theme-color" content="#05080f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hedia Elghoula — Ingénieure IoT & Systèmes embarqués">
+  <meta property="og:description" content="Des objets connectés aux interfaces : systèmes embarqués, IA, réseaux et développement web/mobile.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hedia Elghoula — Portfolio IoT et systèmes embarqués">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hedia Elghoula — Ingénieure IoT & Systèmes embarqués">
+  <meta name="twitter:description" content="Des objets connectés aux interfaces : systèmes embarqués, IA, réseaux et développement web/mobile.">
+  <meta name="twitter:image" content="assets/img/og-image.png">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
+  <script>document.documentElement.classList.add("js");</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hedia Elghoula",
+    "jobTitle": "Étudiante ingénieure en génie informatique — IoT",
+    "email": "mailto:hediaelghoula5@gmail.com",
+    "telephone": "+216 27 782 993",
+    "address": { "@type": "PostalAddress", "addressLocality": "El Jem, Mahdia", "addressCountry": "TN" },
+    "knowsAbout": ["IoT", "Systèmes embarqués", "ESP32", "STM32", "Intelligence artificielle", "MQTT", "Développement web", "Réseaux"],
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "EPI Digital School" },
+      { "@type": "CollegeOrUniversity", "name": "ISSAT Mahdia" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M4 9v11M4 5v.01M10 20v-6a3 3 0 0 1 6 0v6M10 9v11"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.8 2.8M16.2 16.2 19 19M19 5l-2.8 2.8M7.8 16.2 5 19"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M13 4l-2 16"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.6-7.95A6 6 0 0 1 18 9.5a4.5 4.5 0 0 1 .5 8.98H7Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-graduation" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5Z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5M22 9v6"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+  </svg>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#accueil" aria-label="Hedia Elghoula — Accueil">
+        <span class="brand-mark">HE</span>
+        <span class="brand-text">
+          <strong>Hedia Elghoula</strong>
+          <small>IoT &amp; systèmes embarqués</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+        <button class="nav-close" id="navClose" type="button" aria-label="Fermer le menu">
+          <svg class="icon"><use href="#i-close"></use></svg>
+        </button>
+        <ul>
+          <li><a href="#a-propos" class="nav-link">À propos</a></li>
+          <li><a href="#projets" class="nav-link">Projets</a></li>
+          <li><a href="#parcours" class="nav-link">Parcours</a></li>
+          <li><a href="#competences" class="nav-link">Compétences</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a class="btn btn-ghost nav-cv" href="assets/cv/Hedia-Elghoula-CV.pdf" download>
+          <svg class="icon"><use href="#i-download"></use></svg>
+          <span>Mon CV</span>
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Basculer le thème clair / sombre" aria-pressed="false">
+          <svg class="icon icon-sun"><use href="#i-sun"></use></svg>
+          <svg class="icon icon-moon"><use href="#i-moon"></use></svg>
+        </button>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
+          <svg class="icon"><use href="#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="accueil">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-glow glow-a" aria-hidden="true"></div>
+      <div class="hero-glow glow-b" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow pill" data-reveal>
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Ouverte aux stages &amp; alternances · 2026
+          </p>
+
+          <h1 data-reveal>
+            Hedia<br>
+            <span class="gradient-text">Elghoula</span>
+          </h1>
+
+          <p class="hero-role" data-reveal>
+            <span class="sr-only">Spécialisée en IoT, intelligence artificielle et développement web.</span>
+            <span aria-hidden="true"><span class="role-prefix">Je construis des</span> <span class="typed" id="typed" data-words='["systèmes embarqués","solutions IoT","expériences web","modèles intelligents"]'></span><span class="caret"></span></span>
+          </p>
+
+          <p class="hero-lead" data-reveal>
+            Étudiante ingénieure en génie informatique, passionnée par l'<strong>IoT</strong>, l'<strong>intelligence artificielle</strong> et le <strong>développement web</strong>. Je conçois des solutions connectées de bout en bout — du firmware ESP32 au tableau de bord temps réel.
+          </p>
+
+          <div class="hero-cta" data-reveal>
+            <a class="btn btn-primary" href="#projets">
+              <span>Découvrir mes projets</span>
+              <svg class="icon"><use href="#i-arrow"></use></svg>
+            </a>
+            <a class="btn btn-outline" href="assets/cv/Hedia-Elghoula-CV.pdf" download>
+              <svg class="icon"><use href="#i-download"></use></svg>
+              <span>Télécharger le CV</span>
+            </a>
+          </div>
+
+          <dl class="hero-stats" data-reveal>
+            <div><dt>Projets</dt><dd><span class="count" data-count="6">6</span><span class="plus">+</span></dd></div>
+            <div><dt>Stages</dt><dd><span class="count" data-count="3">3</span></dd></div>
+            <div><dt>Certifications</dt><dd><span class="count" data-count="2">2</span></dd></div>
+            <div><dt>Technologies</dt><dd><span class="count" data-count="15">15</span><span class="plus">+</span></dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <div class="portrait-card">
+            <div class="portrait-frame">
+              <img src="assets/img/portrait.svg" alt="Portrait graphique de Hedia Elghoula" width="560" height="700">
+              <div class="portrait-scan" aria-hidden="true"></div>
+            </div>
+
+            <div class="float-card float-a" aria-hidden="true">
+              <span class="float-icon"><svg class="icon"><use href="#i-cpu"></use></svg></span>
+              <span><strong>ESP32 · FreeRTOS</strong><small>Firmware temps réel</small></span>
+            </div>
+
+            <div class="float-card float-b" aria-hidden="true">
+              <span class="float-icon alt"><svg class="icon"><use href="#i-cloud"></use></svg></span>
+              <span><strong>MQTT · Firebase</strong><small>Données en direct</small></span>
+            </div>
+
+            <div class="float-badge" aria-hidden="true">
+              <span class="ring"></span>
+              <span>IoT<br><small>Engineering</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container marquee-wrap" aria-hidden="true">
+        <div class="marquee">
+          <div class="marquee-track">
+            <span>ESP32</span><span>STM32</span><span>FreeRTOS</span><span>MQTT</span><span>TensorFlow</span><span>Angular</span><span>React Native</span><span>Python</span><span>C/C++</span><span>Firebase</span><span>Node-RED</span><span>Docker</span>
+            <span>ESP32</span><span>STM32</span><span>FreeRTOS</span><span>MQTT</span><span>TensorFlow</span><span>Angular</span><span>React Native</span><span>Python</span><span>C/C++</span><span>Firebase</span><span>Node-RED</span><span>Docker</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="a-propos">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-index">01</span>À propos</p>
+          <h2>Des capteurs aux interfaces,<br><span class="gradient-text">je construis la chaîne complète.</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy" data-reveal>
+            <p class="lead">
+              Curieuse, adaptable et animée par une forte capacité d'apprentissage, je suis motivée par la conception de solutions technologiques innovantes.
+            </p>
+            <p>
+              Mon parcours m'a permis d'explorer l'ensemble de la chaîne IoT : programmation embarquée sur ESP32 et STM32, communication réseau avec MQTT et CoAP, collecte et stockage de données, puis développement d'interfaces web et mobiles pour la visualisation en temps réel.
+            </p>
+            <p>
+              Je m'intéresse particulièrement à la conception de systèmes embarqués et au développement de solutions connectées performantes, capables de répondre aux défis technologiques actuels — de la sécurité des communications à l'intelligence embarquée.
+            </p>
+
+            <ul class="focus-list">
+              <li>
+                <span class="focus-icon"><svg class="icon"><use href="#i-cpu"></use></svg></span>
+                <div><strong>Systèmes embarqués</strong><span>ESP32, STM32, FreeRTOS, capteurs et actionneurs</span></div>
+              </li>
+              <li>
+                <span class="focus-icon"><svg class="icon"><use href="#i-shield"></use></svg></span>
+                <div><strong>Sécurité &amp; réseaux IoT</strong><span>MQTT, CoAP, TLS/DTLS, AES, ChaCha20-Poly1305</span></div>
+              </li>
+              <li>
+                <span class="focus-icon"><svg class="icon"><use href="#i-code"></use></svg></span>
+                <div><strong>Web, mobile &amp; IA</strong><span>Angular, React Native, Python, TensorFlow, Firebase</span></div>
+              </li>
+            </ul>
+          </div>
+
+          <aside class="about-aside">
+            <div class="edu-card" data-reveal>
+              <div class="edu-head">
+                <span class="edu-icon"><svg class="icon"><use href="#i-graduation"></use></svg></span>
+                <span class="tag tag-live">En cours</span>
+              </div>
+              <h3>Cycle d'ingénieur en génie informatique</h3>
+              <p class="edu-school">EPI Digital School</p>
+              <p class="edu-meta">Depuis septembre 2024 · IoT &amp; robotique</p>
+            </div>
+
+            <div class="edu-card" data-reveal>
+              <div class="edu-head">
+                <span class="edu-icon alt"><svg class="icon"><use href="#i-terminal"></use></svg></span>
+                <span class="tag">Diplômée</span>
+              </div>
+              <h3>Licence en technologies de l'information</h3>
+              <p class="edu-school">ISSAT Mahdia</p>
+              <p class="edu-meta">2021 – 2024 · Traitement &amp; analyse des données</p>
+            </div>
+
+            <div class="quick-facts" data-reveal>
+              <div><span class="fact-label">Basée à</span><span class="fact-value">El Jem, Mahdia · Tunisie</span></div>
+              <div><span class="fact-label">Langues</span><span class="fact-value">Arabe · Français · Anglais</span></div>
+              <div><span class="fact-label">Engagement</span><span class="fact-value">Bureau du Club Robotique, ISSAT Mahdia</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section section-alt" id="projets">
+      <div class="container">
+        <div class="section-head split" data-reveal>
+          <div>
+            <p class="eyebrow"><span class="eyebrow-index">02</span>Projets sélectionnés</p>
+            <h2>Des idées qui prennent vie,<br><span class="gradient-text">du circuit à l'écran.</span></h2>
+          </div>
+          <p class="section-note">Six projets académiques et personnels mêlant électronique, firmware, cloud et interfaces. Cliquez sur une carte pour explorer l'étude de cas.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filtrer les projets" data-reveal>
+          <button class="filter-btn is-active" type="button" aria-pressed="true" data-filter="all">Tous</button>
+          <button class="filter-btn" type="button" aria-pressed="false" data-filter="iot">IoT &amp; embarqué</button>
+          <button class="filter-btn" type="button" aria-pressed="false" data-filter="web">Web</button>
+          <button class="filter-btn" type="button" aria-pressed="false" data-filter="mobile">Mobile</button>
+          <button class="filter-btn" type="button" aria-pressed="false" data-filter="ia">IA</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card" data-category="iot ia web" data-project="sentinelle" data-reveal>
+            <button class="project-media" type="button" aria-label="Voir l'étude de cas Sentinelle IoT">
+              <img src="assets/img/project-sentinelle.svg" alt="Supervision d'un système de détection d'intrusion avec caméra ESP32-CAM" width="1200" height="720" loading="lazy">
+              <span class="project-badge">IoT · IA</span>
+              <span class="project-hover"><svg class="icon"><use href="#i-arrow"></use></svg></span>
+            </button>
+            <div class="project-body">
+              <div class="project-kicker"><span>Projet académique</span><span>EPI Digital School</span></div>
+              <h3>Sentinelle IoT</h3>
+              <p>Détection d'intrusion, contrôle d'accès et supervision temps réel d'un site connecté.</p>
+              <ul class="chips">
+                <li>ESP32-CAM</li><li>TensorFlow</li><li>Flask</li><li>Angular</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="iot web mobile" data-project="glowix" data-reveal>
+            <button class="project-media" type="button" aria-label="Voir l'étude de cas Glowix">
+              <img src="assets/img/project-glowix.svg" alt="Tableau de bord et application mobile de monitoring environnemental Glowix" width="1200" height="720" loading="lazy">
+              <span class="project-badge">IoT · Web · Mobile</span>
+              <span class="project-hover"><svg class="icon"><use href="#i-arrow"></use></svg></span>
+            </button>
+            <div class="project-body">
+              <div class="project-kicker"><span>Projet académique</span><span>EPI Digital School</span></div>
+              <h3>Glowix</h3>
+              <p>Plateforme web &amp; mobile de monitoring environnemental industriel en temps réel.</p>
+              <ul class="chips">
+                <li>ESP32</li><li>MQTT</li><li>Firebase</li><li>React Native</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="iot" data-project="robot" data-reveal>
+            <button class="project-media" type="button" aria-label="Voir l'étude de cas SécuriBot">
+              <img src="assets/img/project-robot.svg" alt="Robot mobile de sécurité domestique en patrouille autonome" width="1200" height="720" loading="lazy">
+              <span class="project-badge">IoT · Robotique</span>
+              <span class="project-hover"><svg class="icon"><use href="#i-arrow"></use></svg></span>
+            </button>
+            <div class="project-body">
+              <div class="project-kicker"><span>Projet académique</span><span>EPI Digital School</span></div>
+              <h3>SécuriBot</h3>
+              <p>Robot autonome de patrouille, surveillance et détection d'intrusions pour la maison.</p>
+              <ul class="chips">
+                <li>STM32</li><li>MQTT</li><li>Node-RED</li><li>OLED</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web" data-project="fraude" data-reveal>
+            <button class="project-media" type="button" aria-label="Voir l'étude de cas Bouclier">
+              <img src="assets/img/project-fraude.svg" alt="Tableau de bord de l'application anti-fraude Bouclier" width="1200" height="720" loading="lazy">
+              <span class="project-badge">Web</span>
+              <span class="project-hover"><svg class="icon"><use href="#i-arrow"></use></svg></span>
+            </button>
+            <div class="project-body">
+              <div class="project-kicker"><span>Stage · OXYDEV</span><span>2024</span></div>
+              <h3>Bouclier</h3>
+              <p>Application web de détection et de prévention des fraudes, avec suivi des alertes.</p>
+              <ul class="chips">
+                <li>Symfony</li><li>MySQL</li><li>Bootstrap</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web" data-project="maklada" data-reveal>
+            <button class="project-media" type="button" aria-label="Voir l'étude de cas Maklada">
+              <img src="assets/img/project-maklada.svg" alt="Interface d'inventaire du parc informatique de l'application Maklada" width="1200" height="720" loading="lazy">
+              <span class="project-badge">Web</span>
+              <span class="project-hover"><svg class="icon"><use href="#i-arrow"></use></svg></span>
+            </button>
+            <div class="project-body">
+              <div class="project-kicker"><span>Stage · Maklada</span><span>2023</span></div>
+              <h3>Maklada</h3>
+              <p>Gestion du parc informatique : inventaire, affectations et suivi de maintenance.</p>
+              <ul class="chips">
+                <li>Laravel</li><li>PostgreSQL</li><li>HTML/CSS</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web mobile" data-project="autocare" data-reveal>
+            <button class="project-media" type="button" aria-label="Voir l'étude de cas AutoCare">
+              <img src="assets/img/project-autocare.svg" alt="Agenda et application mobile de gestion des services d'entretien automobile" width="1200" height="720" loading="lazy">
+              <span class="project-badge">Web · Mobile</span>
+              <span class="project-hover"><svg class="icon"><use href="#i-arrow"></use></svg></span>
+            </button>
+            <div class="project-body">
+              <div class="project-kicker"><span>Projet académique</span><span>EPI Digital School</span></div>
+              <h3>AutoCare</h3>
+              <p>Gestion des services d'entretien automobile, des rendez-vous et de l'historique véhicule.</p>
+              <ul class="chips">
+                <li>Angular</li><li>React Native</li><li>MongoDB</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <!-- Research spotlight -->
+        <div class="research" data-reveal>
+          <div class="research-media">
+            <img src="assets/img/project-benchmark.svg" alt="Graphiques du benchmark des protocoles IoT MQTT, CoAP, HTTP et AMQP" width="1200" height="600" loading="lazy">
+          </div>
+          <div class="research-body">
+            <p class="eyebrow"><span class="eyebrow-index">R&amp;D</span>Recherche appliquée · AIOTLABS</p>
+            <h3>Performance &amp; sécurité des communications IoT</h3>
+            <p>Étude comparative de protocoles IoT combinés à différents mécanismes cryptographiques, et mesure de leur impact sur l'énergie, la latence, le débit, le PDR, le CPU et la mémoire.</p>
+            <ul class="research-points">
+              <li><svg class="icon"><use href="#i-check"></use></svg>4 protocoles · MQTT, CoAP, HTTP, AMQP</li>
+              <li><svg class="icon"><use href="#i-check"></use></svg>3 mécanismes · AES-128/256, ChaCha20-Poly1305, TLS/DTLS</li>
+              <li><svg class="icon"><use href="#i-check"></use></svg>Analyse statistique · ANOVA &amp; test de Tukey</li>
+            </ul>
+            <ul class="chips">
+              <li>ESP32</li><li>FreeRTOS</li><li>Mosquitto</li><li>RabbitMQ</li><li>Wireshark</li>
+            </ul>
+            <a class="link-arrow" href="#parcours">Voir l'expérience <svg class="icon"><use href="#i-arrow"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section" id="parcours">
+      <div class="container">
+        <div class="section-head split" data-reveal>
+          <div>
+            <p class="eyebrow"><span class="eyebrow-index">03</span>Parcours professionnel</p>
+            <h2>Apprendre sur le terrain,<br><span class="gradient-text">livrer à chaque étape.</span></h2>
+          </div>
+          <p class="section-note">Trois stages, trois univers : la recherche IoT, la fintech et la gestion d'infrastructure.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-meta">
+              <span class="timeline-date">Juin 2026</span>
+              <span class="timeline-place">Sousse, Tunisie</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <h3>Stage d'été — Recherche IoT</h3>
+                  <p class="company">AIOTLABS</p>
+                </div>
+                <span class="tag tag-live">Recherche</span>
+              </div>
+              <p>Étude comparative des performances et de la sécurité des communications dans les systèmes IoT.</p>
+              <ul class="bullet-list">
+                <li>Comparaison de protocoles IoT combinés à différents mécanismes cryptographiques.</li>
+                <li>Mesure de l'impact sur l'énergie, la latence, le débit, le PDR, le CPU et la mémoire.</li>
+                <li>Campagne de mesures sur ESP32, capture réseau et analyse statistique des résultats.</li>
+              </ul>
+              <ul class="chips">
+                <li>ESP32</li><li>FreeRTOS</li><li>C/C++</li><li>MQTT</li><li>CoAP</li><li>AMQP</li><li>TLS/DTLS</li><li>ANOVA</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-meta">
+              <span class="timeline-date">Fév. – Mai 2024</span>
+              <span class="timeline-place">Mahdia, Tunisie</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <h3>Stage de fin d'études — Développement web</h3>
+                  <p class="company">OXYDEV</p>
+                </div>
+                <span class="tag">Fin d'études</span>
+              </div>
+              <p>Conception et développement d'une application web de détection et de prévention des fraudes.</p>
+              <ul class="bullet-list">
+                <li>Développement des interfaces et des parcours métier avec Symfony et Bootstrap.</li>
+                <li>Modélisation et gestion des données sous MySQL.</li>
+                <li>Tableaux de bord de suivi des transactions et des alertes.</li>
+              </ul>
+              <ul class="chips">
+                <li>Symfony</li><li>PHP</li><li>MySQL</li><li>Bootstrap</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-meta">
+              <span class="timeline-date">Juil. – Août 2023</span>
+              <span class="timeline-place">El Jem, Tunisie</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <h3>Stage d'été — Développement web</h3>
+                  <p class="company">Maklada</p>
+                </div>
+                <span class="tag">Stage</span>
+              </div>
+              <p>Application web de gestion des équipements informatiques d'une organisation.</p>
+              <ul class="bullet-list">
+                <li>Création des modules d'inventaire et de suivi des affectations.</li>
+                <li>Interfaces de gestion et de reporting avec Laravel et PostgreSQL.</li>
+                <li>Intégration front-end responsive en HTML/CSS.</li>
+              </ul>
+              <ul class="chips">
+                <li>Laravel</li><li>PHP</li><li>PostgreSQL</li><li>HTML/CSS</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section section-alt" id="competences">
+      <div class="container">
+        <div class="section-head split" data-reveal>
+          <div>
+            <p class="eyebrow"><span class="eyebrow-index">04</span>Compétences</p>
+            <h2>Une stack pensée<br><span class="gradient-text">pour le monde connecté.</span></h2>
+          </div>
+          <p class="section-note">Du firmware au cloud, en passant par la sécurité des protocoles et les interfaces temps réel.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card" data-reveal>
+            <span class="skill-icon"><svg class="icon"><use href="#i-cpu"></use></svg></span>
+            <h3>Embarqué &amp; IoT</h3>
+            <ul class="skill-tags">
+              <li>ESP32</li><li>STM32</li><li>Raspberry Pi</li><li>Arduino</li><li>FreeRTOS</li><li>Node-RED</li><li>KiCad</li>
+            </ul>
+            <p class="skill-note">Firmware C/C++, capteurs, actionneurs, prototypage et conception de PCB.</p>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <span class="skill-icon alt"><svg class="icon"><use href="#i-shield"></use></svg></span>
+            <h3>Réseaux &amp; protocoles</h3>
+            <ul class="skill-tags">
+              <li>MQTT</li><li>CoAP</li><li>HTTP/HTTPS</li><li>WebSocket</li><li>ESP-NOW</li><li>TLS/DTLS</li><li>AES</li>
+            </ul>
+            <p class="skill-note">Communication temps réel, sécurité des échanges et analyse de trafic.</p>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <span class="skill-icon alt2"><svg class="icon"><use href="#i-code"></use></svg></span>
+            <h3>Web &amp; mobile</h3>
+            <ul class="skill-tags">
+              <li>Angular</li><li>React.js</li><li>Next.js</li><li>React Native</li><li>Laravel</li><li>Symfony</li><li>Bootstrap</li>
+            </ul>
+            <p class="skill-note">Interfaces de supervision, back-offices et applications mobiles Expo.</p>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <span class="skill-icon alt3"><svg class="icon"><use href="#i-terminal"></use></svg></span>
+            <h3>Langages &amp; données</h3>
+            <ul class="skill-tags">
+              <li>Python</li><li>C/C++</li><li>JavaScript</li><li>VHDL</li><li>Firebase</li><li>MongoDB</li><li>MySQL</li>
+            </ul>
+            <p class="skill-note">Algorithmes, structures de données, machine learning et modélisation.</p>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <span class="skill-icon alt4"><svg class="icon"><use href="#i-cloud"></use></svg></span>
+            <h3>Cloud &amp; outils</h3>
+            <ul class="skill-tags">
+              <li>Git/GitHub</li><li>Docker</li><li>Firebase</li><li>AWS</li><li>LaTeX</li><li>Wokwi</li><li>Wireshark</li>
+            </ul>
+            <p class="skill-note">Versionnage, conteneurisation, prototypage virtuel et rédaction technique.</p>
+          </article>
+
+          <article class="skill-card skill-lang" data-reveal>
+            <span class="skill-icon alt5"><svg class="icon"><use href="#i-spark"></use></svg></span>
+            <h3>Langues</h3>
+            <div class="lang-row"><span>Arabe</span><span class="level">Langue maternelle</span></div>
+            <div class="lang-bar"><span style="width:100%"></span></div>
+            <div class="lang-row"><span>Français</span><span class="level">Avancé</span></div>
+            <div class="lang-bar"><span style="width:88%"></span></div>
+            <div class="lang-row"><span>Anglais</span><span class="level">Avancé</span></div>
+            <div class="lang-bar"><span style="width:85%"></span></div>
+          </article>
+        </div>
+
+        <div class="credentials">
+          <div class="cert-block" data-reveal>
+            <h3 class="mini-title">Certifications</h3>
+            <div class="cert-grid">
+              <div class="cert-card">
+                <span class="cert-logo">AWS</span>
+                <div>
+                  <strong>AWS Academy Graduate</strong>
+                  <span>Cloud Foundations</span>
+                </div>
+              </div>
+              <div class="cert-card">
+                <span class="cert-logo alt">AR</span>
+                <div>
+                  <strong>Formation Arduino</strong>
+                  <span>Certificat de participation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="engagement" data-reveal>
+            <h3 class="mini-title">Engagements</h3>
+            <ul class="engagement-list">
+              <li>
+                <span class="eng-dot" aria-hidden="true"></span>
+                <div><strong>Membre du bureau — Club Robotique</strong><span>ISSAT Mahdia · projets Arduino &amp; IoT</span></div>
+              </li>
+              <li>
+                <span class="eng-dot" aria-hidden="true"></span>
+                <div><strong>Hackathons</strong><span>Nuit de l'Info et compétitions étudiantes</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact-section" id="contact">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-copy" data-reveal>
+            <p class="eyebrow"><span class="eyebrow-index">05</span>Contact</p>
+            <h2>Une idée connectée ?<br><span class="gradient-text">Construisons-la ensemble.</span></h2>
+            <p>Je suis à la recherche d'un stage ou d'une alternance en IoT, systèmes embarqués ou développement web. N'hésitez pas à me contacter pour échanger sur un projet.</p>
+
+            <ul class="contact-list">
+              <li>
+                <a href="mailto:hediaelghoula5@gmail.com" class="contact-link" id="emailLink">
+                  <span class="contact-icon"><svg class="icon"><use href="#i-mail"></use></svg></span>
+                  <span><small>Email</small><strong>hediaelghoula5@gmail.com</strong></span>
+                </a>
+                <button class="copy-btn" id="copyEmail" type="button" aria-label="Copier l'adresse email">
+                  <svg class="icon"><use href="#i-copy"></use></svg>
+                  <span class="copy-tooltip">Copier</span>
+                </button>
+              </li>
+              <li>
+                <a href="tel:+21627782993" class="contact-link">
+                  <span class="contact-icon"><svg class="icon"><use href="#i-phone"></use></svg></span>
+                  <span><small>Téléphone</small><strong>+216 27 782 993</strong></span>
+                </a>
+              </li>
+              <li>
+                <span class="contact-link">
+                  <span class="contact-icon"><svg class="icon"><use href="#i-pin"></use></svg></span>
+                  <span><small>Localisation</small><strong>El Jem, Mahdia · Tunisie</strong></span>
+                </span>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/hedia-elghoula/" target="_blank" rel="noopener" class="contact-link">
+                  <span class="contact-icon"><svg class="icon"><use href="#i-linkedin"></use></svg></span>
+                  <span><small>LinkedIn</small><strong>Hedia Elghoula</strong></span>
+                  <svg class="icon icon-ext"><use href="#i-external"></use></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-form-wrap" data-reveal>
+            <form class="contact-form" id="contactForm" novalidate>
+              <h3>Envoyer un message</h3>
+              <p class="form-note">Le formulaire ouvre votre messagerie avec le message pré-rempli.</p>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="name">Nom <span aria-hidden="true">*</span></label>
+                  <input type="text" id="name" name="name" autocomplete="name" placeholder="Votre nom" required>
+                  <span class="field-error" data-error-for="name"></span>
+                </div>
+                <div class="field">
+                  <label for="email">Email <span aria-hidden="true">*</span></label>
+                  <input type="email" id="email" name="email" autocomplete="email" placeholder="vous@exemple.com" required>
+                  <span class="field-error" data-error-for="email"></span>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="subject">Sujet <span aria-hidden="true">*</span></label>
+                <input type="text" id="subject" name="subject" placeholder="Stage, alternance, collaboration…" required>
+                <span class="field-error" data-error-for="subject"></span>
+              </div>
+
+              <div class="field">
+                <label for="message">Message <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" rows="5" placeholder="Parlez-moi de votre projet…" required></textarea>
+                <span class="field-error" data-error-for="message"></span>
+              </div>
+
+              <button class="btn btn-primary btn-full" type="submit">
+                <span>Envoyer le message</span>
+                <svg class="icon"><use href="#i-arrow"></use></svg>
+              </button>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#accueil" aria-label="Retour en haut">
+        <span class="brand-mark">HE</span>
+        <span class="brand-text"><strong>Hedia Elghoula</strong><small>IoT &amp; systèmes embarqués</small></span>
+      </a>
+      <p class="footer-note">Conçu et développé avec curiosité · El Jem, Tunisie · © <span id="year">2026</span></p>
+      <div class="footer-links">
+        <a href="mailto:hediaelghoula5@gmail.com" aria-label="Envoyer un email">
+          <svg class="icon"><use href="#i-mail"></use></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/hedia-elghoula/" target="_blank" rel="noopener" aria-label="Profil LinkedIn">
+          <svg class="icon"><use href="#i-linkedin"></use></svg>
+        </a>
+        <a href="assets/cv/Hedia-Elghoula-CV.pdf" download aria-label="Télécharger le CV">
+          <svg class="icon"><use href="#i-download"></use></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Revenir en haut de la page">
+    <svg class="icon"><use href="#i-arrow-up"></use></svg>
+  </button>
+
+  <!-- Project modal -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc" tabindex="-1">
+      <button class="modal-close" type="button" data-close-modal aria-label="Fermer la fenêtre">
+        <svg class="icon"><use href="#i-close"></use></svg>
+      </button>
+      <div class="modal-media">
+        <img id="modalImage" alt="" width="1200" height="720">
+        <span class="project-badge" id="modalBadge"></span>
+      </div>
+      <div class="modal-content">
+        <p class="modal-kicker" id="modalKicker"></p>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc" class="modal-desc"></p>
+        <div class="modal-columns">
+          <div>
+            <h4>Points clés</h4>
+            <ul class="bullet-list" id="modalFeatures"></ul>
+          </div>
+          <div>
+            <h4>Stack technique</h4>
+            <ul class="chips" id="modalStack"></ul>
+            <h4 class="modal-role-title">Mon rôle</h4>
+            <p class="modal-role" id="modalRole"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js?v=8"></script>
+</body>
+</html>

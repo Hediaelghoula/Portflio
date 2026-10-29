@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 700" width="560" height="700" role="img" aria-label="Portrait graphique de Hedia Elghoula">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1526"/>
+      <stop offset=".5" stop-color="#0a1120"/>
+      <stop offset="1" stop-color="#120e26"/>
+    </linearGradient>
+    <radialGradient id="halo" cx=".5" cy=".42" r=".5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".35"/>
+      <stop offset=".6" stop-color="#8b5cf6" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset=".5" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="text" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8f6ff"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.3" cy="1.3" r="1.3" fill="#94a3b8" opacity=".14"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="20" stdDeviation="26" flood-color="#000" flood-opacity=".5"/>
+    </filter>
+  </defs>
+
+  <rect width="560" height="700" rx="32" fill="url(#bg)"/>
+  <rect width="560" height="700" rx="32" fill="url(#dots)"/>
+  <rect x="1" y="1" width="558" height="698" rx="31" fill="none" stroke="#ffffff" stroke-opacity=".12"/>
+
+  <circle cx="280" cy="300" r="230" fill="url(#halo)"/>
+
+  <!-- orbit rings -->
+  <g fill="none" stroke="url(#ring)" stroke-opacity=".35">
+    <circle cx="280" cy="300" r="212" stroke-width="1"/>
+    <circle cx="280" cy="300" r="176" stroke-width="1" stroke-dasharray="3 8" stroke-opacity=".5"/>
+  </g>
+  <g stroke="#22d3ee" stroke-opacity=".4" stroke-width="1.5">
+    <path d="M68 300 H128"/>
+    <path d="M432 300 H492"/>
+    <path d="M280 88 V128"/>
+    <path d="M280 472 V520"/>
+  </g>
+  <g fill="#22d3ee">
+    <circle cx="68" cy="300" r="4" filter="url(#glow)"/>
+    <circle cx="492" cy="300" r="4" filter="url(#glow)"/>
+    <circle cx="280" cy="88" r="4" filter="url(#glow)"/>
+  </g>
+
+  <!-- rotating accent arcs -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M280 112 A188 188 0 0 1 438 208" stroke="#22d3ee" stroke-width="3" opacity=".75"/>
+    <path d="M468 300 A188 188 0 0 1 372 458" stroke="#8b5cf6" stroke-width="3" opacity=".75"/>
+    <path d="M92 300 A188 188 0 0 1 188 142" stroke="#34d399" stroke-width="3" opacity=".55"/>
+  </g>
+
+  <!-- monogram disc -->
+  <g filter="url(#shadow)">
+    <circle cx="280" cy="300" r="150" fill="#0b1526" stroke="#ffffff" stroke-opacity=".1"/>
+    <circle cx="280" cy="300" r="136" fill="none" stroke="#22d3ee" stroke-opacity=".18"/>
+    <text x="280" y="334" text-anchor="middle" fill="url(#text)" font-family="Segoe UI, Arial, sans-serif" font-size="104" font-weight="700" letter-spacing="-4">HE</text>
+    <path d="M206 360 H354" stroke="url(#ring)" stroke-width="2" opacity=".6"/>
+    <text x="280" y="390" text-anchor="middle" fill="#7f9ab8" font-family="Consolas, monospace" font-size="10" letter-spacing="4">IOT ENGINEER</text>
+  </g>
+
+  <!-- chips -->
+  <g font-family="Consolas, monospace" font-size="10">
+    <g transform="translate(46 178)">
+      <rect width="112" height="34" rx="17" fill="#0b1526" stroke="#22d3ee" stroke-opacity=".4"/>
+      <circle cx="18" cy="17" r="4" fill="#22d3ee"/>
+      <text x="32" y="21" fill="#a5eaf5">ESP32</text>
+    </g>
+    <g transform="translate(396 172)">
+      <rect width="118" height="34" rx="17" fill="#0b1526" stroke="#8b5cf6" stroke-opacity=".45"/>
+      <circle cx="18" cy="17" r="4" fill="#8b5cf6"/>
+      <text x="32" y="21" fill="#d3c6ff">MQTT</text>
+    </g>
+    <g transform="translate(68 402)">
+      <rect width="130" height="34" rx="17" fill="#0b1526" stroke="#34d399" stroke-opacity=".4"/>
+      <circle cx="18" cy="17" r="4" fill="#34d399"/>
+      <text x="32" y="21" fill="#a7f3d0">TENSORFLOW</text>
+    </g>
+    <g transform="translate(370 408)">
+      <rect width="122" height="34" rx="17" fill="#0b1526" stroke="#38bdf8" stroke-opacity=".4"/>
+      <circle cx="18" cy="17" r="4" fill="#38bdf8"/>
+      <text x="32" y="21" fill="#bae6fd">ANGULAR</text>
+    </g>
+  </g>
+
+  <!-- name plate -->
+  <g transform="translate(40 540)">
+    <rect width="480" height="112" rx="20" fill="#ffffff" fill-opacity=".04" stroke="#ffffff" stroke-opacity=".1"/>
+    <text x="24" y="38" fill="#eaf4ff" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Hedia Elghoula</text>
+    <text x="24" y="60" fill="#8ba3c0" font-family="Segoe UI, Arial, sans-serif" font-size="12">Étudiante ingénieure · Génie informatique</text>
+    <g transform="translate(24 78)">
+      <circle cx="4" cy="4" r="4" fill="#34d399" filter="url(#glow)"/>
+      <text x="16" y="8" fill="#6d839c" font-family="Consolas, monospace" font-size="10">DISPONIBLE POUR STAGE / ALTERNANCE</text>
+    </g>
+    <g transform="translate(376 26)">
+      <circle cx="38" cy="38" r="38" fill="#22d3ee" opacity=".08"/>
+      <path d="M38 16 L56 24 V38 C56 50 48 57 38 61 C28 57 20 50 20 38 V24 Z" fill="none" stroke="#22d3ee" stroke-opacity=".6" stroke-width="1.6"/>
+      <path d="M30 38 L36 44 L47 31" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

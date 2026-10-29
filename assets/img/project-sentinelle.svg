@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-label="Interface de supervision du système de détection d'intrusion">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070d1a"/>
+      <stop offset="0.55" stop-color="#0b1527"/>
+      <stop offset="1" stop-color="#101c33"/>
+    </linearGradient>
+    <linearGradient id="cam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#13233d"/>
+      <stop offset="1" stop-color="#0a1425"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.4" cy="1.4" r="1.4" fill="#94a3b8" opacity=".12"/>
+    </pattern>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#dots)"/>
+  <circle cx="960" cy="120" r="220" fill="#8b5cf6" opacity=".18" filter="url(#soft)"/>
+  <circle cx="170" cy="620" r="210" fill="#22d3ee" opacity=".14" filter="url(#soft)"/>
+
+  <!-- Camera feed panel -->
+  <g filter="url(#shadow)">
+    <rect x="92" y="104" width="576" height="432" rx="26" fill="url(#cam)" stroke="#ffffff" stroke-opacity=".1"/>
+    <rect x="92" y="104" width="576" height="54" rx="26" fill="#ffffff" fill-opacity=".04"/>
+    <circle cx="126" cy="131" r="7" fill="#ef4444"/>
+    <text x="146" y="137" fill="#dbe7f7" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="600">CAM 01 · Entrée principale</text>
+    <text x="628" y="137" text-anchor="end" fill="#7f93af" font-family="Segoe UI, Arial, sans-serif" font-size="15">LIVE</text>
+
+    <!-- room lines -->
+    <g stroke="#8fa7c6" stroke-opacity=".18" stroke-width="2">
+      <path d="M92 396 L668 396"/>
+      <path d="M280 396 L280 240 L500 240 L500 396"/>
+      <path d="M152 104 L152 396"/>
+      <path d="M152 300 L280 300"/>
+    </g>
+
+    <!-- camera cone -->
+    <path d="M330 178 L214 396 L518 396 Z" fill="url(#scan)" opacity=".8"/>
+    <g transform="translate(316 158)">
+      <rect x="-26" y="-14" width="52" height="30" rx="8" fill="#1c2c48" stroke="#38bdf8" stroke-opacity=".6"/>
+      <circle cx="0" cy="1" r="7" fill="#38bdf8"/>
+    </g>
+
+    <!-- person silhouette -->
+    <g opacity=".9">
+      <circle cx="402" cy="292" r="27" fill="#c7d5ea"/>
+      <path d="M356 396 C356 344 372 322 402 322 C432 322 448 344 448 396 Z" fill="#c7d5ea"/>
+    </g>
+    <!-- detection box -->
+    <g fill="none" stroke="#22d3ee" stroke-width="3">
+      <path d="M342 250 H324 V268"/>
+      <path d="M462 250 H480 V268"/>
+      <path d="M342 382 H324 V364"/>
+      <path d="M462 382 H480 V364"/>
+    </g>
+    <g transform="translate(342 224)">
+      <rect width="150" height="28" rx="8" fill="#22d3ee"/>
+      <text x="75" y="19" text-anchor="middle" fill="#04121d" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing=".8">INTRUSION · 98%</text>
+    </g>
+
+    <!-- bottom HUD -->
+    <text x="124" y="470" fill="#7f93af" font-family="Consolas, monospace" font-size="14">22:41:06</text>
+    <text x="124" y="496" fill="#22d3ee" font-family="Consolas, monospace" font-size="14">ALERTE ENVOYÉE → FIREBASE</text>
+  </g>
+
+  <!-- ESP32 board -->
+  <g transform="translate(716 132)" filter="url(#shadow)">
+    <rect width="250" height="176" rx="18" fill="#0d1a2f" stroke="#ffffff" stroke-opacity=".12"/>
+    <rect x="26" y="30" width="132" height="116" rx="10" fill="#12223b" stroke="#38bdf8" stroke-opacity=".45"/>
+    <rect x="42" y="54" width="58" height="40" rx="5" fill="#1d3355" stroke="#ffffff" stroke-opacity=".18"/>
+    <text x="71" y="79" text-anchor="middle" fill="#9db4d3" font-family="Consolas, monospace" font-size="11">ESP32</text>
+    <g fill="#334f75">
+      <rect x="44" y="108" width="16" height="16" rx="3"/>
+      <rect x="68" y="108" width="16" height="16" rx="3"/>
+      <rect x="92" y="108" width="16" height="16" rx="3"/>
+    </g>
+    <g stroke="#22d3ee" stroke-opacity=".8" stroke-width="2" fill="none">
+      <path d="M118 42 H158 V62"/>
+      <path d="M118 74 H146 V92 H182"/>
+      <path d="M118 106 H170 V126"/>
+    </g>
+    <circle cx="158" cy="62" r="4" fill="#22d3ee"/>
+    <circle cx="182" cy="92" r="4" fill="#22d3ee"/>
+    <circle cx="170" cy="126" r="4" fill="#22d3ee"/>
+    <text x="196" y="66" fill="#8ea6c6" font-family="Consolas, monospace" font-size="10">CAM</text>
+    <text x="196" y="96" fill="#8ea6c6" font-family="Consolas, monospace" font-size="10">LOCK</text>
+    <text x="196" y="130" fill="#8ea6c6" font-family="Consolas, monospace" font-size="10">PIR</text>
+  </g>
+
+  <!-- dashboard mini -->
+  <g transform="translate(716 336)" filter="url(#shadow)">
+    <rect width="250" height="200" rx="18" fill="#0d1a2f" stroke="#ffffff" stroke-opacity=".12"/>
+    <text x="22" y="34" fill="#dbe7f7" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Supervision</text>
+    <circle cx="226" cy="28" r="5" fill="#34d399"/>
+    <g transform="translate(22 52)">
+      <rect width="206" height="44" rx="10" fill="#13233d"/>
+      <rect x="12" y="12" width="20" height="20" rx="6" fill="#22d3ee" opacity=".18"/>
+      <circle cx="22" cy="22" r="4" fill="#22d3ee"/>
+      <text x="44" y="19" fill="#8ea6c6" font-family="Segoe UI, Arial, sans-serif" font-size="10">Accès autorisé</text>
+      <text x="44" y="33" fill="#e7eefb" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Badge · Hedia E.</text>
+      <text x="194" y="27" text-anchor="end" fill="#34d399" font-family="Consolas, monospace" font-size="12">OK</text>
+    </g>
+    <g transform="translate(22 104)">
+      <rect width="206" height="44" rx="10" fill="#2a1526"/>
+      <rect x="12" y="12" width="20" height="20" rx="6" fill="#f43f5e" opacity=".18"/>
+      <circle cx="22" cy="22" r="4" fill="#f43f5e"/>
+      <text x="44" y="19" fill="#c99aab" font-family="Segoe UI, Arial, sans-serif" font-size="10">Mouvement détecté</text>
+      <text x="44" y="33" fill="#ffe4ec" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">Zone entrée</text>
+      <text x="194" y="27" text-anchor="end" fill="#f43f5e" font-family="Consolas, monospace" font-size="12">!</text>
+    </g>
+    <g transform="translate(22 160)">
+      <rect width="206" height="22" rx="11" fill="#12223b"/>
+      <rect width="148" height="22" rx="11" fill="url(#accent)" opacity=".9"/>
+      <text x="10" y="15" fill="#06121f" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700">TRAFIC RÉSEAU</text>
+    </g>
+  </g>
+
+  <!-- connection lines -->
+  <g stroke="#22d3ee" stroke-opacity=".35" stroke-width="2" stroke-dasharray="7 8" fill="none">
+    <path d="M668 320 C700 320 688 210 716 210"/>
+    <path d="M668 380 C702 380 690 436 716 436"/>
+  </g>
+
+  <!-- shield badge -->
+  <g transform="translate(1010 122)" filter="url(#glow)">
+    <circle cx="44" cy="44" r="44" fill="#22d3ee" opacity=".08"/>
+    <path d="M44 14 L72 26 V46 C72 64 59 74 44 80 C29 74 16 64 16 46 V26 Z" fill="none" stroke="#22d3ee" stroke-width="2.5"/>
+    <path d="M33 46 L41 54 L57 37" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="1054" y="214" text-anchor="middle" fill="#7f93af" font-family="Consolas, monospace" font-size="12">SÉCURISÉ</text>
+
+  <!-- caption strip -->
+  <g opacity=".8">
+    <rect x="92" y="612" width="874" height="1" fill="#ffffff" opacity=".1"/>
+    <text x="92" y="652" fill="#e7eefb" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="600">Détection intelligente · Contrôle d'accès · Supervision temps réel</text>
+    <text x="966" y="652" text-anchor="end" fill="#7f93af" font-family="Consolas, monospace" font-size="13">ESP32 · FLASK · ANGULAR · TENSORFLOW</text>
+  </g>
+</svg>

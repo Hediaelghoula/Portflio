@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="Benchmark des protocoles IoT et de leur sécurité sur ESP32">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081120"/>
+      <stop offset=".55" stop-color="#0a1526"/>
+      <stop offset="1" stop-color="#0c1a2e"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#10b981"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0 H0 V36" fill="none" stroke="#94a3b8" stroke-opacity=".07"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="44"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+  <circle cx="1080" cy="80" r="200" fill="#22d3ee" opacity=".14" filter="url(#soft)"/>
+  <circle cx="120" cy="560" r="200" fill="#8b5cf6" opacity=".16" filter="url(#soft)"/>
+
+  <text x="64" y="72" fill="#22d3ee" font-family="Consolas, monospace" font-size="12" letter-spacing="3">RECHERCHE APPLIQUÉE · AIOTLABS · 2026</text>
+  <text x="64" y="118" fill="#eaf4ff" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Performance &amp; sécurité des communications IoT</text>
+  <text x="64" y="148" fill="#8ba3c0" font-family="Segoe UI, Arial, sans-serif" font-size="14">Comparaison de MQTT, CoAP, HTTP et AMQP combinés à AES-128/256, ChaCha20-Poly1305 et TLS/DTLS sur ESP32.</text>
+
+  <!-- protocol chips -->
+  <g transform="translate(64 182)" font-family="Consolas, monospace" font-size="11">
+    <g>
+      <rect width="86" height="34" rx="17" fill="#22d3ee" fill-opacity=".1" stroke="#22d3ee" stroke-opacity=".35"/>
+      <text x="43" y="22" text-anchor="middle" fill="#67e8f9">MQTT</text>
+    </g>
+    <g transform="translate(98 0)">
+      <rect width="86" height="34" rx="17" fill="#a78bfa" fill-opacity=".1" stroke="#a78bfa" stroke-opacity=".35"/>
+      <text x="43" y="22" text-anchor="middle" fill="#c4b5fd">CoAP</text>
+    </g>
+    <g transform="translate(196 0)">
+      <rect width="86" height="34" rx="17" fill="#34d399" fill-opacity=".1" stroke="#34d399" stroke-opacity=".35"/>
+      <text x="43" y="22" text-anchor="middle" fill="#6ee7b7">HTTP</text>
+    </g>
+    <g transform="translate(294 0)">
+      <rect width="86" height="34" rx="17" fill="#f59e0b" fill-opacity=".1" stroke="#f59e0b" stroke-opacity=".35"/>
+      <text x="43" y="22" text-anchor="middle" fill="#fcd34d">AMQP</text>
+    </g>
+    <g transform="translate(392 0)">
+      <rect width="154" height="34" rx="17" fill="#ffffff" fill-opacity=".04" stroke="#ffffff" stroke-opacity=".14"/>
+      <text x="77" y="22" text-anchor="middle" fill="#c3d3e6">AES · CHACHA20</text>
+    </g>
+  </g>
+
+  <!-- metrics panel -->
+  <g transform="translate(64 244)" filter="url(#shadow)">
+    <rect width="636" height="292" rx="20" fill="#0b1728" stroke="#ffffff" stroke-opacity=".1"/>
+    <text x="24" y="34" fill="#dbe9f9" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Indicateurs mesurés</text>
+    <text x="612" y="34" text-anchor="end" fill="#6d839c" font-family="Consolas, monospace" font-size="10">ESP32 · FreeRTOS</text>
+
+    <!-- legend -->
+    <g transform="translate(24 52)" font-family="Segoe UI, Arial, sans-serif" font-size="10">
+      <circle cx="4" cy="4" r="4" fill="#22d3ee"/>
+      <text x="16" y="8" fill="#8ba3c0">Sans chiffrement</text>
+      <circle cx="150" cy="4" r="4" fill="#a78bfa"/>
+      <text x="162" y="8" fill="#8ba3c0">AES-128</text>
+      <circle cx="256" cy="4" r="4" fill="#34d399"/>
+      <text x="268" y="8" fill="#8ba3c0">ChaCha20</text>
+    </g>
+
+    <!-- grouped bars -->
+    <g transform="translate(24 76)">
+      <g font-family="Consolas, monospace" font-size="9" fill="#6d839c">
+        <text x="0" y="18">ÉNERGIE</text>
+        <text x="0" y="88">LATENCE</text>
+        <text x="0" y="158">DÉBIT</text>
+        <text x="0" y="228">CPU</text>
+      </g>
+      <!-- energy -->
+      <g transform="translate(96 4)">
+        <rect x="0" y="4" width="120" height="10" rx="5" fill="#22d3ee" opacity=".75"/>
+        <rect x="0" y="18" width="156" height="10" rx="5" fill="#a78bfa" opacity=".75"/>
+        <rect x="0" y="32" width="142" height="10" rx="5" fill="#34d399" opacity=".75"/>
+      </g>
+      <!-- latency -->
+      <g transform="translate(96 74)">
+        <rect x="0" y="4" width="210" height="10" rx="5" fill="#22d3ee" opacity=".75"/>
+        <rect x="0" y="18" width="250" height="10" rx="5" fill="#a78bfa" opacity=".75"/>
+        <rect x="0" y="32" width="228" height="10" rx="5" fill="#34d399" opacity=".75"/>
+      </g>
+      <!-- throughput -->
+      <g transform="translate(96 144)">
+        <rect x="0" y="4" width="330" height="10" rx="5" fill="#22d3ee" opacity=".75"/>
+        <rect x="0" y="18" width="286" height="10" rx="5" fill="#a78bfa" opacity=".75"/>
+        <rect x="0" y="32" width="304" height="10" rx="5" fill="#34d399" opacity=".75"/>
+      </g>
+      <!-- cpu -->
+      <g transform="translate(96 214)">
+        <rect x="0" y="4" width="148" height="10" rx="5" fill="#22d3ee" opacity=".75"/>
+        <rect x="0" y="18" width="196" height="10" rx="5" fill="#a78bfa" opacity=".75"/>
+        <rect x="0" y="32" width="172" height="10" rx="5" fill="#34d399" opacity=".75"/>
+      </g>
+      <g stroke="#ffffff" stroke-opacity=".06">
+        <path d="M96 -8 V232"/>
+        <path d="M96 28 H440"/>
+        <path d="M96 98 H440"/>
+        <path d="M96 168 H440"/>
+        <path d="M96 238 H440"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- right panel -->
+  <g transform="translate(728 244)" filter="url(#shadow)">
+    <rect width="408" height="292" rx="20" fill="#0b1728" stroke="#ffffff" stroke-opacity=".1"/>
+    <text x="24" y="34" fill="#dbe9f9" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Chaîne de mesure</text>
+
+    <!-- pipeline -->
+    <g transform="translate(24 56)" font-family="Consolas, monospace" font-size="9">
+      <g>
+        <rect width="150" height="40" rx="10" fill="#10233a"/>
+        <text x="14" y="17" fill="#8ba3c0">CAPTEUR</text>
+        <text x="14" y="31" fill="#67e8f9">ESP32</text>
+        <circle cx="128" cy="20" r="5" fill="#22d3ee"/>
+      </g>
+      <path d="M150 20 H182" stroke="#22d3ee" stroke-width="2"/>
+      <g transform="translate(182 0)">
+        <rect width="178" height="40" rx="10" fill="#10233a"/>
+        <text x="14" y="17" fill="#8ba3c0">BROKER</text>
+        <text x="14" y="31" fill="#c4b5fd">MOSQUITTO · RABBITMQ</text>
+        <circle cx="156" cy="20" r="5" fill="#a78bfa"/>
+      </g>
+      <g transform="translate(0 62)">
+        <rect width="150" height="40" rx="10" fill="#10233a"/>
+        <text x="14" y="17" fill="#8ba3c0">CAPTURE</text>
+        <text x="14" y="31" fill="#6ee7b7">WIRESHARK</text>
+        <circle cx="128" cy="20" r="5" fill="#34d399"/>
+      </g>
+      <path d="M75 40 V62" stroke="#34d399" stroke-width="2" stroke-dasharray="4 4"/>
+      <g transform="translate(182 62)">
+        <rect width="178" height="40" rx="10" fill="#10233a"/>
+        <text x="14" y="17" fill="#8ba3c0">ANALYSE</text>
+        <text x="14" y="31" fill="#fcd34d">ANOVA · TUKEY</text>
+        <circle cx="156" cy="20" r="5" fill="#f59e0b"/>
+      </g>
+    </g>
+
+    <rect x="24" y="186" width="360" height="1" fill="#ffffff" opacity=".08"/>
+    <text x="24" y="214" fill="#8ba3c0" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600">Indicateurs analysés</text>
+    <g transform="translate(24 226)" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#c3d3e6">
+      <g><circle cx="3" cy="4" r="2.5" fill="#22d3ee"/><text x="14" y="8">Énergie</text></g>
+      <g transform="translate(104 0)"><circle cx="3" cy="4" r="2.5" fill="#22d3ee"/><text x="14" y="8">Latence</text></g>
+      <g transform="translate(208 0)"><circle cx="3" cy="4" r="2.5" fill="#22d3ee"/><text x="14" y="8">Débit</text></g>
+      <g transform="translate(300 0)"><circle cx="3" cy="4" r="2.5" fill="#22d3ee"/><text x="14" y="8">PDR</text></g>
+      <g transform="translate(0 26)"><circle cx="3" cy="4" r="2.5" fill="#a78bfa"/><text x="14" y="8">CPU</text></g>
+      <g transform="translate(104 26)"><circle cx="3" cy="4" r="2.5" fill="#a78bfa"/><text x="14" y="8">Mémoire</text></g>
+      <g transform="translate(208 26)"><circle cx="3" cy="4" r="2.5" fill="#a78bfa"/><text x="14" y="8">Sécurité</text></g>
+      <g transform="translate(300 26)"><circle cx="3" cy="4" r="2.5" fill="#a78bfa"/><text x="14" y="8">Overhead</text></g>
+    </g>
+  </g>
+
+  <text x="64" y="572" fill="#6d839c" font-family="Consolas, monospace" font-size="11">STAGE D'ÉTÉ 2026 · SOUSSE</text>
+  <text x="1136" y="572" text-anchor="end" fill="#6d839c" font-family="Consolas, monospace" font-size="11">TLS/DTLS · AES · CHACHA20-POLY1305</text>
+</svg>

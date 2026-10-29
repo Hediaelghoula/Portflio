@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-label="Tableau de bord de monitoring environnemental Glowix">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06101a"/>
+      <stop offset=".5" stop-color="#0a1826"/>
+      <stop offset="1" stop-color="#0c1f2d"/>
+    </linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#34d399" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0 H0 V34" fill="none" stroke="#94a3b8" stroke-opacity=".08"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="48"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+  <circle cx="1060" cy="560" r="240" fill="#34d399" opacity=".14" filter="url(#soft)"/>
+  <circle cx="180" cy="90" r="200" fill="#22d3ee" opacity=".13" filter="url(#soft)"/>
+
+  <!-- factory silhouette -->
+  <g opacity=".5" fill="#122c3a">
+    <rect x="60" y="470" width="80" height="130"/>
+    <rect x="146" y="430" width="54" height="170"/>
+    <path d="M210 600 V452 L262 484 V600 Z"/>
+    <rect x="268" y="492" width="64" height="108"/>
+    <path d="M338 600 V420 L386 452 V600 Z"/>
+    <rect x="392" y="500" width="42" height="100"/>
+    <path d="M440 600 V440 H500 V600 Z"/>
+  </g>
+  <g stroke="#34d399" stroke-opacity=".35" stroke-width="2" fill="none">
+    <path d="M92 470 V420 Q92 402 110 402 H150"/>
+    <path d="M170 420 V380 Q170 362 188 362 H230"/>
+    <path d="M300 492 V450 Q300 432 318 432 H358"/>
+  </g>
+  <g fill="#34d399" opacity=".7">
+    <circle cx="150" cy="402" r="4"/>
+    <circle cx="230" cy="362" r="4"/>
+    <circle cx="358" cy="432" r="4"/>
+  </g>
+
+  <!-- main dashboard -->
+  <g transform="translate(150 92)" filter="url(#shadow)">
+    <rect width="700" height="496" rx="26" fill="#0a1622" stroke="#ffffff" stroke-opacity=".1"/>
+    <rect width="700" height="64" rx="26" fill="#ffffff" fill-opacity=".03"/>
+    <circle cx="36" cy="32" r="9" fill="#34d399"/>
+    <text x="56" y="39" fill="#e7f3f1" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700">GLOWIX</text>
+    <text x="135" y="39" fill="#7f9bab" font-family="Segoe UI, Arial, sans-serif" font-size="14">Supervision environnementale · Site industriel</text>
+    <rect x="556" y="18" width="112" height="28" rx="14" fill="#34d399" opacity=".12"/>
+    <text x="612" y="37" text-anchor="middle" fill="#34d399" font-family="Consolas, monospace" font-size="11" letter-spacing="1">EN LIGNE</text>
+
+    <!-- KPI cards -->
+    <g transform="translate(28 88)">
+      <g>
+        <rect width="200" height="112" rx="16" fill="#0f2230" stroke="#ffffff" stroke-opacity=".07"/>
+        <text x="18" y="30" fill="#7f9bab" font-family="Segoe UI, Arial, sans-serif" font-size="12" letter-spacing=".8">TEMPÉRATURE</text>
+        <text x="18" y="70" fill="#eaf7f4" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">24.6</text>
+        <text x="96" y="70" fill="#7f9bab" font-family="Segoe UI, Arial, sans-serif" font-size="16">°C</text>
+        <path d="M18 94 H72 L86 82 L100 94 H150 L164 86 H182" fill="none" stroke="#22d3ee" stroke-width="2"/>
+        <circle cx="180" cy="24" r="4" fill="#22d3ee"/>
+      </g>
+      <g transform="translate(216 0)">
+        <rect width="200" height="112" rx="16" fill="#0f2230" stroke="#ffffff" stroke-opacity=".07"/>
+        <text x="18" y="30" fill="#7f9bab" font-family="Segoe UI, Arial, sans-serif" font-size="12" letter-spacing=".8">HUMIDITÉ</text>
+        <text x="18" y="70" fill="#eaf7f4" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">58</text>
+        <text x="64" y="70" fill="#7f9bab" font-family="Segoe UI, Arial, sans-serif" font-size="16">%</text>
+        <rect x="18" y="88" width="164" height="7" rx="3.5" fill="#163444"/>
+        <rect x="18" y="88" width="96" height="7" rx="3.5" fill="#34d399"/>
+        <circle cx="180" cy="24" r="4" fill="#34d399"/>
+      </g>
+      <g transform="translate(432 0)">
+        <rect width="212" height="112" rx="16" fill="#0f2230" stroke="#ffffff" stroke-opacity=".07"/>
+        <text x="18" y="30" fill="#7f9bab" font-family="Segoe UI, Arial, sans-serif" font-size="12" letter-spacing=".8">QUALITÉ D'AIR</text>
+        <text x="18" y="70" fill="#eaf7f4" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">412</text>
+        <text x="94" y="70" fill="#7f9bab" font-family="Segoe UI, Arial, sans-serif" font-size="16">ppm</text>
+        <rect x="150" y="52" width="44" height="24" rx="12" fill="#f59e0b" opacity=".15"/>
+        <text x="172" y="68" text-anchor="middle" fill="#fbbf24" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600">MOYEN</text>
+        <circle cx="192" cy="24" r="4" fill="#f59e0b"/>
+      </g>
+    </g>
+
+    <!-- chart -->
+    <g transform="translate(28 220)">
+      <rect width="644" height="212" rx="18" fill="#0d1d2a" stroke="#ffffff" stroke-opacity=".06"/>
+      <text x="20" y="32" fill="#dcefee" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600">Évolution sur 24 heures</text>
+      <g fill="#7f9bab" font-family="Consolas, monospace" font-size="10">
+        <text x="560" y="32">MQTT · LIVE</text>
+      </g>
+      <g stroke="#ffffff" stroke-opacity=".06">
+        <path d="M20 74 H624"/>
+        <path d="M20 114 H624"/>
+        <path d="M20 154 H624"/>
+        <path d="M20 190 H624"/>
+      </g>
+      <path d="M20 176 L60 168 L100 172 L140 150 L180 158 L220 132 L260 142 L300 110 L340 122 L380 96 L420 108 L460 84 L500 96 L540 72 L580 86 L620 62 V190 H20 Z" fill="url(#area)"/>
+      <path d="M20 176 L60 168 L100 172 L140 150 L180 158 L220 132 L260 142 L300 110 L340 122 L380 96 L420 108 L460 84 L500 96 L540 72 L580 86 L620 62" fill="none" stroke="url(#line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="540" cy="72" r="5" fill="#34d399" filter="url(#glow)"/>
+      <g fill="#6d8798" font-family="Consolas, monospace" font-size="10">
+        <text x="20" y="207">00h</text>
+        <text x="160" y="207">06h</text>
+        <text x="300" y="207">12h</text>
+        <text x="440" y="207">18h</text>
+        <text x="606" y="207">24h</text>
+      </g>
+    </g>
+
+    <!-- footer status -->
+    <g transform="translate(28 452)">
+      <circle cx="7" cy="7" r="7" fill="#34d399"/>
+      <text x="24" y="12" fill="#8fb0ae" font-family="Consolas, monospace" font-size="11">12 capteurs connectés · 3 passerelles ESP32 · Dernière synchronisation il y a 2 s</text>
+    </g>
+  </g>
+
+  <!-- phone -->
+  <g transform="translate(892 168)" filter="url(#shadow)">
+    <rect width="220" height="404" rx="34" fill="#0a1420" stroke="#ffffff" stroke-opacity=".16"/>
+    <rect x="10" y="10" width="200" height="384" rx="26" fill="#0e1e2b"/>
+    <rect x="82" y="20" width="56" height="7" rx="3.5" fill="#20384a"/>
+    <text x="24" y="66" fill="#eaf7f4" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Glowix</text>
+    <text x="24" y="84" fill="#7290a1" font-family="Segoe UI, Arial, sans-serif" font-size="10">Atelier · Zone B</text>
+    <g transform="translate(24 104)">
+      <rect width="172" height="94" rx="16" fill="#12303a"/>
+      <text x="16" y="26" fill="#9fc0c3" font-family="Segoe UI, Arial, sans-serif" font-size="10">TEMPÉRATURE</text>
+      <text x="16" y="62" fill="#eaf7f4" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">24.6°</text>
+      <path d="M96 62 L112 50 L128 58 L144 40 L158 46" fill="none" stroke="#34d399" stroke-width="2"/>
+    </g>
+    <g transform="translate(24 212)">
+      <rect width="172" height="48" rx="12" fill="#2a2312"/>
+      <circle cx="22" cy="24" r="6" fill="#fbbf24"/>
+      <text x="40" y="21" fill="#ffe9b3" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600">Seuil CO₂ dépassé</text>
+      <text x="40" y="36" fill="#bfa76a" font-family="Segoe UI, Arial, sans-serif" font-size="9">Zone B · il y a 3 min</text>
+    </g>
+    <g transform="translate(24 276)">
+      <rect width="172" height="48" rx="12" fill="#0f2632"/>
+      <circle cx="22" cy="24" r="6" fill="#22d3ee"/>
+      <text x="40" y="21" fill="#d4eef1" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600">Ventilation activée</text>
+      <text x="40" y="36" fill="#6f8d9b" font-family="Segoe UI, Arial, sans-serif" font-size="9">Automatisation · MQTT</text>
+    </g>
+    <g transform="translate(24 342)">
+      <rect width="172" height="34" rx="17" fill="#34d399"/>
+      <text x="86" y="22" text-anchor="middle" fill="#06231a" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">Voir le dashboard</text>
+    </g>
+  </g>
+
+  <!-- mqtt chip -->
+  <g transform="translate(836 580)">
+    <rect width="140" height="40" rx="20" fill="#a78bfa" fill-opacity=".12" stroke="#a78bfa" stroke-opacity=".4"/>
+    <circle cx="24" cy="20" r="5" fill="#a78bfa"/>
+    <text x="40" y="25" fill="#d6c8ff" font-family="Consolas, monospace" font-size="12">MQTT · ESP32</text>
+  </g>
+
+  <text x="150" y="646" fill="#e7f3f1" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="600">Collecter · Transmettre · Superviser en temps réel</text>
+  <text x="1050" y="646" text-anchor="end" fill="#7f9bab" font-family="Consolas, monospace" font-size="13">REACT NATIVE · FIREBASE</text>
+</svg>

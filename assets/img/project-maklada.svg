@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-label="Application web de gestion des équipements informatiques">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06111c"/>
+      <stop offset=".6" stop-color="#081827"/>
+      <stop offset="1" stop-color="#0a2030"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d2032"/>
+      <stop offset="1" stop-color="#081521"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0 H0 V32" fill="none" stroke="#67e8f9" stroke-opacity=".07"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity=".5"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+  <circle cx="1040" cy="110" r="230" fill="#3b82f6" opacity=".18" filter="url(#soft)"/>
+  <circle cx="170" cy="640" r="220" fill="#22d3ee" opacity=".12" filter="url(#soft)"/>
+
+  <!-- server rack -->
+  <g transform="translate(886 96)" filter="url(#shadow)">
+    <rect width="200" height="300" rx="16" fill="#0b1a28" stroke="#ffffff" stroke-opacity=".12"/>
+    <g font-family="Consolas, monospace" font-size="9">
+      <g transform="translate(16 20)">
+        <rect width="168" height="38" rx="6" fill="#10293b" stroke="#22d3ee" stroke-opacity=".25"/>
+        <circle cx="14" cy="19" r="3" fill="#34d399"/>
+        <text x="28" y="23" fill="#8fb8c9">SRV-01</text>
+        <text x="152" y="23" text-anchor="end" fill="#4e7487">OK</text>
+      </g>
+      <g transform="translate(16 68)">
+        <rect width="168" height="38" rx="6" fill="#10293b" stroke="#22d3ee" stroke-opacity=".25"/>
+        <circle cx="14" cy="19" r="3" fill="#34d399"/>
+        <text x="28" y="23" fill="#8fb8c9">SRV-02</text>
+        <text x="152" y="23" text-anchor="end" fill="#4e7487">OK</text>
+      </g>
+      <g transform="translate(16 116)">
+        <rect width="168" height="38" rx="6" fill="#10293b" stroke="#22d3ee" stroke-opacity=".25"/>
+        <circle cx="14" cy="19" r="3" fill="#f59e0b"/>
+        <text x="28" y="23" fill="#8fb8c9">NAS-01</text>
+        <text x="152" y="23" text-anchor="end" fill="#fbbf24">SYNC</text>
+      </g>
+      <g transform="translate(16 164)">
+        <rect width="168" height="38" rx="6" fill="#10293b" stroke="#22d3ee" stroke-opacity=".25"/>
+        <circle cx="14" cy="19" r="3" fill="#34d399"/>
+        <text x="28" y="23" fill="#8fb8c9">SW-01</text>
+        <text x="152" y="23" text-anchor="end" fill="#4e7487">48P</text>
+      </g>
+      <g transform="translate(16 212)">
+        <rect width="168" height="38" rx="6" fill="#10293b" stroke="#22d3ee" stroke-opacity=".25"/>
+        <circle cx="14" cy="19" r="3" fill="#34d399"/>
+        <text x="28" y="23" fill="#8fb8c9">FW-01</text>
+        <text x="152" y="23" text-anchor="end" fill="#4e7487">UP</text>
+      </g>
+    </g>
+    <g transform="translate(16 264)">
+      <rect width="168" height="18" rx="9" fill="#10293b"/>
+      <rect width="122" height="18" rx="9" fill="url(#blue)" opacity=".7"/>
+    </g>
+  </g>
+
+  <!-- laptop -->
+  <g transform="translate(92 128)" filter="url(#shadow)">
+    <rect width="720" height="432" rx="20" fill="url(#screen)" stroke="#ffffff" stroke-opacity=".14"/>
+    <rect width="720" height="44" rx="20" fill="#ffffff" fill-opacity=".03"/>
+    <circle cx="24" cy="22" r="5" fill="#ef4444"/>
+    <circle cx="42" cy="22" r="5" fill="#f59e0b"/>
+    <circle cx="60" cy="22" r="5" fill="#22c55e"/>
+    <text x="92" y="27" fill="#7f9db0" font-family="Consolas, monospace" font-size="10">maklada.tn / inventaire</text>
+
+    <!-- sidebar -->
+    <rect y="44" width="150" height="388" fill="#08131e"/>
+    <text x="20" y="82" fill="#e6f6fb" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Maklada</text>
+    <text x="20" y="98" fill="#5d7f92" font-family="Segoe UI, Arial, sans-serif" font-size="8" letter-spacing="1">GESTION IT</text>
+    <g font-family="Segoe UI, Arial, sans-serif" font-size="10">
+      <rect x="10" y="118" width="130" height="28" rx="7" fill="#22d3ee" opacity=".12"/>
+      <circle cx="24" cy="132" r="3" fill="#22d3ee"/>
+      <text x="36" y="136" fill="#bdf0fa" font-weight="600">Inventaire</text>
+      <circle cx="24" cy="166" r="3" fill="#4e6d7e"/>
+      <text x="36" y="170" fill="#8aa9b9">Affectations</text>
+      <circle cx="24" cy="196" r="3" fill="#4e6d7e"/>
+      <text x="36" y="200" fill="#8aa9b9">Maintenance</text>
+      <circle cx="24" cy="226" r="3" fill="#4e6d7e"/>
+      <text x="36" y="230" fill="#8aa9b9">Fournisseurs</text>
+      <circle cx="24" cy="256" r="3" fill="#4e6d7e"/>
+      <text x="36" y="260" fill="#8aa9b9">Rapports</text>
+    </g>
+    <rect x="10" y="356" width="130" height="60" rx="10" fill="#0d2230"/>
+    <text x="22" y="376" fill="#7f9db0" font-family="Segoe UI, Arial, sans-serif" font-size="8">ÉQUIPEMENTS</text>
+    <text x="22" y="398" fill="#22d3ee" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">248</text>
+    <text x="70" y="398" fill="#5d7f92" font-family="Segoe UI, Arial, sans-serif" font-size="8">+12 ce mois</text>
+
+    <!-- main -->
+    <text x="174" y="82" fill="#e6f6fb" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">Inventaire des équipements</text>
+    <text x="174" y="100" fill="#6b8a9c" font-family="Segoe UI, Arial, sans-serif" font-size="9">Suivi du parc informatique · El Jem</text>
+    <g transform="translate(560 66)">
+      <rect width="130" height="28" rx="14" fill="url(#blue)"/>
+      <text x="65" y="18" text-anchor="middle" fill="#04121d" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700">+ Ajouter</text>
+    </g>
+
+    <!-- kpi -->
+    <g transform="translate(174 116)" font-family="Segoe UI, Arial, sans-serif">
+      <rect width="156" height="62" rx="10" fill="#0d2230" stroke="#ffffff" stroke-opacity=".05"/>
+      <text x="14" y="20" fill="#6b8a9c" font-size="8">EN SERVICE</text>
+      <text x="14" y="46" fill="#6ee7b7" font-size="22" font-weight="700">196</text>
+      <rect x="104" y="18" width="38" height="28" rx="6" fill="#34d399" opacity=".12"/>
+      <text x="123" y="36" text-anchor="middle" fill="#34d399" font-size="9">79%</text>
+    </g>
+    <g transform="translate(340 116)" font-family="Segoe UI, Arial, sans-serif">
+      <rect width="156" height="62" rx="10" fill="#0d2230" stroke="#ffffff" stroke-opacity=".05"/>
+      <text x="14" y="20" fill="#6b8a9c" font-size="8">EN MAINTENANCE</text>
+      <text x="14" y="46" fill="#fbbf24" font-size="22" font-weight="700">34</text>
+      <rect x="104" y="18" width="38" height="28" rx="6" fill="#f59e0b" opacity=".12"/>
+      <text x="123" y="36" text-anchor="middle" fill="#fbbf24" font-size="9">14%</text>
+    </g>
+    <g transform="translate(506 116)" font-family="Segoe UI, Arial, sans-serif">
+      <rect width="184" height="62" rx="10" fill="#0d2230" stroke="#ffffff" stroke-opacity=".05"/>
+      <text x="14" y="20" fill="#6b8a9c" font-size="8">HORS SERVICE</text>
+      <text x="14" y="46" fill="#fda4af" font-size="22" font-weight="700">18</text>
+      <rect x="120" y="18" width="48" height="28" rx="6" fill="#f43f5e" opacity=".12"/>
+      <text x="144" y="36" text-anchor="middle" fill="#fda4af" font-size="9">7%</text>
+    </g>
+
+    <!-- table -->
+    <g transform="translate(174 196)" font-family="Segoe UI, Arial, sans-serif">
+      <rect width="516" height="210" rx="12" fill="#0b1c29" stroke="#ffffff" stroke-opacity=".05"/>
+      <rect width="516" height="32" rx="12" fill="#ffffff" fill-opacity=".03"/>
+      <g fill="#6b8a9c" font-size="8" letter-spacing=".5">
+        <text x="16" y="21">CODE</text>
+        <text x="92" y="21">ÉQUIPEMENT</text>
+        <text x="270" y="21">SERVICE</text>
+        <text x="376" y="21">UTILISATEUR</text>
+        <text x="474" y="21">ÉTAT</text>
+      </g>
+      <g font-size="10" fill="#cfe7f1">
+        <text x="16" y="56">IT-0142</text>
+        <text x="92" y="56">Dell Latitude 5540</text>
+        <text x="270" y="56">Direction</text>
+        <text x="376" y="56">M. Trabelsi</text>
+        <text x="474" y="56" fill="#34d399">Actif</text>
+        <text x="16" y="90">IT-0143</text>
+        <text x="92" y="90">HP EliteBook 840</text>
+        <text x="270" y="90">Comptabilité</text>
+        <text x="376" y="90">S. Ben Ali</text>
+        <text x="474" y="90" fill="#34d399">Actif</text>
+        <text x="16" y="124">IT-0144</text>
+        <text x="92" y="124">Cisco Catalyst 9200</text>
+        <text x="270" y="124">Réseau</text>
+        <text x="376" y="124">—</text>
+        <text x="474" y="124" fill="#fbbf24">Maintenance</text>
+        <text x="16" y="158">IT-0145</text>
+        <text x="92" y="158">Epson EB-X51</text>
+        <text x="270" y="158">Salle réunion</text>
+        <text x="376" y="158">—</text>
+        <text x="474" y="158" fill="#fda4af">Hors service</text>
+        <text x="16" y="192">IT-0146</text>
+        <text x="92" y="192">Lenovo ThinkCentre</text>
+        <text x="270" y="192">Accueil</text>
+        <text x="376" y="192">A. Gharbi</text>
+        <text x="474" y="192" fill="#34d399">Actif</text>
+      </g>
+      <g stroke="#ffffff" stroke-opacity=".04">
+        <path d="M0 66 H516"/>
+        <path d="M0 100 H516"/>
+        <path d="M0 134 H516"/>
+        <path d="M0 168 H516"/>
+      </g>
+    </g>
+
+    <!-- laptop base -->
+    <path d="M-34 432 H754 L782 464 H-62 Z" fill="#0b1a26" stroke="#ffffff" stroke-opacity=".1"/>
+    <rect x="286" y="444" width="120" height="8" rx="4" fill="#182f40"/>
+  </g>
+
+  <!-- floating cards -->
+  <g transform="translate(838 440)" filter="url(#shadow)">
+    <rect width="250" height="126" rx="16" fill="#0b1a28" stroke="#22d3ee" stroke-opacity=".25"/>
+    <text x="18" y="30" fill="#7f9db0" font-family="Segoe UI, Arial, sans-serif" font-size="9" letter-spacing=".6">AFFECTATION</text>
+    <text x="18" y="58" fill="#e6f6fb" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Direction · 2e étage</text>
+    <g transform="translate(18 74)">
+      <circle cx="12" cy="12" r="12" fill="#3b82f6" opacity=".25"/>
+      <text x="12" y="16" text-anchor="middle" fill="#bfdbfe" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="700">MT</text>
+      <text x="32" y="10" fill="#cfe7f1" font-family="Segoe UI, Arial, sans-serif" font-size="10">M. Trabelsi</text>
+      <text x="32" y="23" fill="#5d7f92" font-family="Segoe UI, Arial, sans-serif" font-size="8">Signé · 12/06/2023</text>
+      <rect x="180" y="2" width="44" height="20" rx="10" fill="#34d399" opacity=".14"/>
+      <text x="202" y="16" text-anchor="middle" fill="#34d399" font-family="Segoe UI, Arial, sans-serif" font-size="8">PDF</text>
+    </g>
+  </g>
+
+  <g transform="translate(828 590)" filter="url(#shadow)">
+    <rect width="260" height="52" rx="26" fill="#0b1a28" stroke="#ffffff" stroke-opacity=".1"/>
+    <circle cx="26" cy="26" r="6" fill="#22d3ee"/>
+    <text x="44" y="23" fill="#cfe7f1" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600">Laravel · PostgreSQL</text>
+    <text x="44" y="38" fill="#5d7f92" font-family="Consolas, monospace" font-size="9">STAGE · MAKLADA · 2023</text>
+  </g>
+
+  <text x="92" y="646" fill="#e6f6fb" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="600">Un parc informatique enfin sous contrôle</text>
+  <text x="92" y="672" fill="#6b8a9c" font-family="Segoe UI, Arial, sans-serif" font-size="13">Inventaire · Affectations · Maintenance · Reporting</text>
+</svg>
